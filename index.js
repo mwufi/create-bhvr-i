@@ -30,13 +30,14 @@ function displayBanner() {
   console.log('\n');
   console.log(chalk.yellowBright(text));
   console.log(`\n${chalk.cyan('🦫 Lets build 🦫')}\n`);
-  console.log(`${chalk.blue('https://github.com/stevedylandev/bhvr')}\n`);
+  console.log(`${chalk.blue('https://github.com/mwufi/bhvr-i')}\n`);
+  console.log(`${chalk.blue('Forked from https://github.com/stevedylandev/bhvr')}\n`);
 }
 
 // Set up the CLI program
 program
-  .name('create-bhvr')
-  .description('Create a bhvr monorepo starter project')
+  .name('create-bhvr-i')
+  .description('Create a bhvr+i monorepo starter project')
   .argument('[project-directory]', 'directory to create the project in')
   .option('-y, --yes', 'skip confirmation prompts')
   .option('--ts, --typescript', 'use TypeScript (default)')
@@ -171,7 +172,7 @@ async function createProject(projectDirectory, options) {
           spinner.start('Initializing git repository...');
           await execa('git', ['init'], { cwd: projectPath });
           await execa('git', ['add', '.'], { cwd: projectPath });
-          await execa('git', ['commit', '-m', 'Initial commit from create-bhvr'], { cwd: projectPath });
+          await execa('git', ['commit', '-m', 'Initial commit from create-bhvr-i'], { cwd: projectPath });
           spinner.succeed('Git repository initialized');
           gitInitialized = true;
         } catch (err) {
@@ -185,7 +186,7 @@ async function createProject(projectDirectory, options) {
         spinner.start('Initializing git repository...');
         await execa('git', ['init'], { cwd: projectPath });
         await execa('git', ['add', '.'], { cwd: projectPath });
-        await execa('git', ['commit', '-m', 'Initial commit from create-bhvr'], { cwd: projectPath });
+        await execa('git', ['commit', '-m', 'Initial commit from create-bhvr-i'], { cwd: projectPath });
         spinner.succeed('Git repository initialized');
         gitInitialized = true;
       } catch (err) {
