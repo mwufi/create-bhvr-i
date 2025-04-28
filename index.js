@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // GitHub repository for the template
-const DEFAULT_REPO = 'stevedylandev/bhvr'; // Replace with your actual repo
+const DEFAULT_REPO = 'mwufi/bhvr-i'; // Replace with your actual repo
 
 // Function to display a fun banner
 function displayBanner() {
